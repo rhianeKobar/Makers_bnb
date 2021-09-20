@@ -3,7 +3,7 @@ require 'sinatra/reloader'
 
 class BNB < Sinatra::base
   get '/' do
-    'Hello world!'
+    'Hello not the world!'
   end
 
   run! if app_file == $0
