@@ -10,11 +10,13 @@ group :development do
 	gem "sinatra"
 	gem "sinatra-contrib"
 	gem "pg"
+	gem 'bcrypt'
 end
 
 group :test do
 	gem "rubocop"
 	gem "simplecov"
+	gem "simplecov-console"
 	gem "capybara"
 	gem "rspec"
 	gem 'thin'
