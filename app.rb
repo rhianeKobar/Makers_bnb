@@ -3,7 +3,11 @@ require 'sinatra/reloader'
 
 class BNB < Sinatra::base
   get '/' do
-    'Ha Ed wins'
+    =======
+  end
+
+  get '/new_page' do
+    'This is a brand new page and updated pull request'
   end
 
 	get '/haha' do
