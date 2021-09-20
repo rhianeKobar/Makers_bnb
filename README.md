@@ -42,4 +42,20 @@ Features to Add Later
 - Renter cannot see a booked property
 ```
 
-#### Breaking requirements down into User Stories
+#### Breaking down User Stories
+
+##### MVP
+
+```
+As a User
+So that I can choose a place to stay
+I want to see all the available properties
+
+As a User
+So that I can rent out my property
+I want add properties to the current listing
+
+As a User
+So that I don't book an unavailable property
+I want only see available properties
+```
