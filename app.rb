@@ -3,7 +3,7 @@ require 'sinatra/reloader'
 
 class BNB < Sinatra::base
   get '/' do
-    'Hello not the world!'
+    =======
   end
 
   get '/new_page' do
