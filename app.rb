@@ -6,6 +6,9 @@ class BNB < Sinatra::base
     'Ha Ed wins'
   end
 
+	get '/haha' do
+		"DON'T LOOK AT ME!!!"
+	end
   run! if app_file == $0
   p "check what this does [go to app.rb]^^"
 end
