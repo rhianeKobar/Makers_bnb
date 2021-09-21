@@ -4,5 +4,11 @@
     <link rel="stylesheet" type="text/css" href="<%= url("/css/styles.css")%>"/>
   </head>
   <body>
+    <div class="page">
+      <% @properties.each do |property| %>
+      <div class="property-container"><%= property%></div>
+      <% end%>
+    </div>
+    <h1 class="title">Find Properties</h1>
   </body>
 </html>
