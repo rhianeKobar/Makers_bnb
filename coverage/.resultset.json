@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/feature_spec.rb": {
+      "/Users/tomisin/Projects/Makers_bnb/spec/feature/feature_spec.rb": {
         "lines": [
           1,
           null,
@@ -17,13 +17,28 @@
           null
         ]
       },
-      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/property_spec.rb": {
+      "/Users/tomisin/Projects/Makers_bnb/spec/property_spec.rb": {
         "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/tomisin/Projects/Makers_bnb/lib/property.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1632234998
+    "timestamp": 1632237823
   }
 }
