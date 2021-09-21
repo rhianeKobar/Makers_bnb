@@ -11,6 +11,13 @@ require 'simplecov-console'
 
 Capybara.app = BNB
 
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
+
+
 #simplecov setup
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
