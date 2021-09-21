@@ -1,0 +1,11 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+}
+
+.property-container {
+  height: 200px;
+  width: 200px;
+  background-color: aquamarine;
+}
