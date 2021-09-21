@@ -16,7 +16,7 @@ end
 group :test do
 	gem "rubocop"
 	gem "simplecov"
-	gem "simplecov-console"
+  gem 'simplecov-console', require: false
 	gem "capybara"
 	gem "rspec"
 	gem 'thin'

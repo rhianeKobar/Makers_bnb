@@ -1,16 +1,21 @@
 ENV['RACK_ENV'] = 'test'
 
-require File.join(File.dirname(__FILE__), '..', 'app.rb')
-
+# require File.join(File.dirname(__FILE__), '..', 'app.rb')      ### Why do we need this when the other does it jsut as well
+require_relative '../app.rb'
 require 'capybara'
 require 'rspec'
 require 'capybara/rspec'
 require 'pg'
-require 'simplecov-console'
+require 'simplecov'
+require 'simplecov-console' 
 
 Capybara.app = BNB
 
-
+#simplecov setup
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::Console,
+])
+SimpleCov.start
 
 RSpec.configure do |config|
 

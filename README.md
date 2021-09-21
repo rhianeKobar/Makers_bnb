@@ -59,3 +59,7 @@ As a User
 So that I don't book an unavailable property
 I want only see available properties
 ```
+
+#### Before we start
+
+-
