@@ -8,6 +8,7 @@ require 'capybara/rspec'
 require 'pg'
 require 'simplecov'
 require 'simplecov-console' 
+require_relative 'setup_test_database'
 
 Capybara.app = BNB
 
