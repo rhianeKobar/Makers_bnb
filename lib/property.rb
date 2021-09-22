@@ -23,9 +23,20 @@ class Property
     end
   end
 
+  def self.add(name:, description:, price:, availability:)
+    if ENV['RACK_ENV'] == 'test'
+      connection = PG.connect(dbname: 'bnb_test')
+    else
+      connection = PG.connect(dbname: 'bnb')
+    end
+    result = connection.exec("INSERT INTO properties (name, description, price, availability) VALUES('#{name}', '#{description}', '#{price}', '#{availability}') RETURNING id, name, description, price, availability;")
+    Property.new(id: result[0]['id'], name: result[0]['name'], description: result[0]['description'], price: result[0]['price'], availability: result[0]['availability'])
+  end
+
   private
 
   def to_boolean(availability)
     availability == "t"
   end
+
 end

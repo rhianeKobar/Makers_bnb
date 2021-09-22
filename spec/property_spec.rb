@@ -16,4 +16,20 @@ describe Property do
       # expect(result.first.id).to eq 
     end
   end
+
+  describe '.add' do
+    it 'can add a new property to the table' do
+      property = Property.add(name: 'House2', description: 'this is a description 2', price: 6, availability: false)
+      connection = PG.connect(dbname: 'bnb_test')
+      result = connection.query("SELECT * FROM properties WHERE id = #{property.id};")
+      result = result.first
+
+      expect(property).to be_a Property
+      expect(property.name).to eq result['name']
+      expect(property.description).to eq result['description']
+      expect(property.price).to eq result['price'].to_i
+      expect(property.availability).to eq false
+    end
+  end
 end
+
