@@ -6,6 +6,6 @@
     
 #     expect(page).to have_content 'House1'
 #     expect(page).to have_content 'this is a description'
-#     expect(page).to have_content 5 ### maybe expect to see "available" on page if true
+#     expect(page).to have_content 5### maybe expect to see "available" on page if true
 #   end
 # end

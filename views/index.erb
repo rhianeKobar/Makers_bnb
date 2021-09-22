@@ -17,8 +17,11 @@
           </div>
         </div>
         <% @properties.each do |property| %>
-          <div class="property-container">
-            <%= property%>
+          <div class="property-container" id="<%= property.id%>">
+            <%= property.name %>
+            <%= property.description %>
+            <%= property.availability ? "Available" : "Unavailable" %>
+            <%= property.price %>
           </div>
         <% end%>
         <div> 
