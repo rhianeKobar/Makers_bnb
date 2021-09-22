@@ -29,7 +29,7 @@ class Property
     else
       connection = PG.connect(dbname: 'bnb')
     end
-    result = connection.exec("INSERT INTO properties (name, description, price, availability) VALUES('#{name}', '#{description}', '#{price}', '#{availability}') RETURNING id, name, description, price, availability;")
+    result = connection.exec_params("INSERT INTO properties (name, description, price, availability) VALUES($1, $2, $3, $4) RETURNING id, name, description, price, availability;", [name,description,price,availability])
     Property.new(id: result[0]['id'], name: result[0]['name'], description: result[0]['description'], price: result[0]['price'], availability: result[0]['availability'])
   end
 
@@ -38,5 +38,4 @@ class Property
   def to_boolean(availability)
     availability == "t"
   end
-
 end
