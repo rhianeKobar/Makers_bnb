@@ -20,9 +20,9 @@ describe Property do
   describe '.add' do
     it 'can add a new property to the table' do
       property = Property.add(name: 'House2', description: 'this is a description 2', price: 6, availability: false)
-      connection = PG.connect(dbname: 'bnb_test')
-      result = connection.query("SELECT * FROM properties WHERE id = #{property.id};")
-      result = result.first
+      # result = connection.query("SELECT * FROM properties WHERE id = #{property.id};")
+      result = PGDatabase.select_property(id: property.id).first
+      # result = result.first
 
       expect(property).to be_a Property
       expect(property.name).to eq result['name']

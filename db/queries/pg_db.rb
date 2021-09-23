@@ -19,4 +19,24 @@ class PGDatabase
     @db_session
   end
 
+  def self.truncate_tables
+    @db_session.exec("TRUNCATE properties;")
+  end
+
+  # Select
+  def self.select_properties
+    @db_session.exec("SELECT * FROM properties;")
+  end
+
+  def self.select_property(id:)
+    @db_session.query("SELECT * FROM properties WHERE id = #{id};")
+  end
+
+
+  # Insert
+
+  def self.insert_property(name:, description:, price:, availability:)
+    @db_session.exec_params("INSERT INTO properties (name, description, price, availability) VALUES($1, $2, $3, $4) RETURNING id, name, description, price, availability;", [name,description,price,availability])
+  end
+
 end

@@ -7,9 +7,9 @@ module DB
   def connect
 
     if ENV['ENVIRONMENT'] == 'test'
-      PGDatabase.connect('bnb_test')
+      PGDatabase.make_connection('bnb_test')
     else
-      PGDatabase.connect('bnb')
+      PGDatabase.make_connection('bnb')
     end
 
   end
