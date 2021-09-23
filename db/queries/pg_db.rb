@@ -9,8 +9,9 @@ class PGDatabase
     begin
       @db_session = PG.connect(dbname: db)
     rescue
-      @db_session = PG.connect('localhost','5432','','','bnb','postgres','postgres')
+      @db_session = PG.connect('localhost','5432','','',db,'postgres',ENV['DBPASSWORD'])
     rescue
+      p 'it didnt work'
       @db_session = PG.connect :dbname => db, :user => ENV['DBUSER'], :password => ENV['DBPASSWORD']
     rescue PG::Error => e
       puts e.message 
