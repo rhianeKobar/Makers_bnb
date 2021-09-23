@@ -1,4 +1,4 @@
-ENV['RACK_ENV'] = 'test'
+ENV['ENVIRONMENT'] = 'test'
 
 # require File.join(File.dirname(__FILE__), '..', 'app.rb')      ### Why do we need this when the other does it jsut as well
 require_relative './../app.rb'
@@ -11,9 +11,8 @@ require 'simplecov-console'
 require_relative 'setup_test_database'
 require_relative '../db/queries/pg_connect.rb'
 
-include DB
-ENV['ENVIRONMENT'] = 'test'
-connect
+
+DB.connect
 
 Capybara.app = BNB
 
