@@ -17,6 +17,7 @@ GEM
     daemons (1.4.1)
     diff-lcs (1.4.4)
     docile (1.4.0)
+    dotenv (2.7.6)
     eventmachine (1.2.7)
     mini_mime (1.1.1)
     mini_portile2 (2.6.1)
@@ -104,6 +105,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   capybara
+  dotenv
   pg
   rspec
   rubocop
@@ -117,4 +119,4 @@ RUBY VERSION
    ruby 2.7.2p137
 
 BUNDLED WITH
-   2.1.4
+   2.2.26
