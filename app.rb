@@ -14,7 +14,7 @@ class BNB < Sinatra::Base
 
   post '/add' do
     p params
-    Property.add(name: params['name'], description: params['description'], price: params['price'], availability: params['available'])
+    Property.add(name: params['name'], description: params['description'], price: params['price'], availability: Property.to_boolean(params['available']))
     redirect '/'
   end
 

@@ -8,14 +8,14 @@ class Property
     @name = name
     @description = description
     @price = price.to_i
-    @availability = to_boolean(availability)
+    @availability = availability
   end
 
   def self.all
     if ENV['RACK_ENV'] == 'test'
-      connection = PG.connect(dbname: 'bnb_test')
+      connection = PG.connect('localhost','5432','','','bnb_test','postgres','postgres')
     else
-      connection = PG.connect(dbname: 'bnb')
+      connection = PG.connect('localhost','5432','','','bnb','postgres','postgres')
     end
     result = connection.exec("SELECT * FROM properties;")
     result.map do |property| 
@@ -25,17 +25,19 @@ class Property
 
   def self.add(name:, description:, price:, availability:)
     if ENV['RACK_ENV'] == 'test'
-      connection = PG.connect(dbname: 'bnb_test')
+      connection = PG.connect('localhost','5432','','','bnb_test','postgres','postgres')
     else
-      connection = PG.connect(dbname: 'bnb')
+      connection = PG.connect('localhost','5432','','','bnb','postgres','postgres')
     end
     result = connection.exec_params("INSERT INTO properties (name, description, price, availability) VALUES($1, $2, $3, $4) RETURNING id, name, description, price, availability;", [name,description,price,availability])
     Property.new(id: result[0]['id'], name: result[0]['name'], description: result[0]['description'], price: result[0]['price'], availability: result[0]['availability'])
   end
 
-  private
-
-  def to_boolean(availability)
-    availability == "t"
+  def Property.to_boolean(availability)
+    if availability == 1.0
+      true
+    else
+      false
+    end
   end
 end

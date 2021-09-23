@@ -1,11 +1,44 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Student/Documents/MakersAcademy/Projects/Team_projects/bnb/Makers_bnb/spec/feature/add_properties_spec.rb": {
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/add_properties_spec.rb": {
         "lines": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/all_properties_spec.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
-          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/feature_spec.rb": {
+        "lines": [
           null,
           null,
           null,
@@ -20,70 +53,39 @@
           null
         ]
       },
-      "/Users/Student/Documents/MakersAcademy/Projects/Team_projects/bnb/Makers_bnb/spec/feature/all_properties_spec.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/Student/Documents/MakersAcademy/Projects/Team_projects/bnb/Makers_bnb/spec/feature/feature_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/Student/Documents/MakersAcademy/Projects/Team_projects/bnb/Makers_bnb/spec/property_spec.rb": {
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/property_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
           1,
-          1,
-          1,
+          0,
+          0,
           null,
-          1,
+          0,
           null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           null,
           1,
           1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           null,
@@ -91,6 +93,6 @@
         ]
       }
     },
-    "timestamp": 1632318656
+    "timestamp": 1632407725
   }
 }
