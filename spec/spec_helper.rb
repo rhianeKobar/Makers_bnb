@@ -9,6 +9,11 @@ require 'pg'
 require 'simplecov'
 require 'simplecov-console' 
 require_relative 'setup_test_database'
+require_relative '../db/queries/pg_connect.rb'
+
+include DB
+ENV['ENVIRONMENT'] = 'test'
+connect
 
 Capybara.app = BNB
 
@@ -17,7 +22,6 @@ RSpec.configure do |config|
     setup_test_database
   end
 end
-
 
 #simplecov setup
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([

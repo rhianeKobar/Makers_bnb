@@ -1,21 +1,26 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/db_queries_spec.rb": {
+        "lines": [
+
+        ]
+      },
       "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/add_properties_spec.rb": {
         "lines": [
           1,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -24,14 +29,15 @@
         "lines": [
           1,
           1,
-          0,
-          0,
-          0,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -60,32 +66,31 @@
           1,
           1,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null,
           1,
           1,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -93,6 +98,6 @@
         ]
       }
     },
-    "timestamp": 1632407725
+    "timestamp": 1632408002
   }
 }
