@@ -1,7 +1,7 @@
 ENV['RACK_ENV'] = 'test'
 
 # require File.join(File.dirname(__FILE__), '..', 'app.rb')      ### Why do we need this when the other does it jsut as well
-require_relative '../app.rb'
+require_relative './../app.rb'
 require 'capybara'
 require 'rspec'
 require 'capybara/rspec'

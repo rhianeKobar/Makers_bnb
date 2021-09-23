@@ -12,7 +12,7 @@ describe Property do
       expect(result.first.name).to eq 'House1' 
       expect(result.first.description).to eq 'this is a description'
       expect(result.first.price).to eq 5
-      expect(result.first.availability).to eq true
+      expect(result.first.availability).to eq 't'
       expect(result.first.id).to eq property.id
     end
   end
@@ -28,7 +28,7 @@ describe Property do
       expect(property.name).to eq result['name']
       expect(property.description).to eq result['description']
       expect(property.price).to eq result['price'].to_i
-      expect(property.availability).to eq false
+      expect(property.availability).to eq 'f'
     end
   end
 end

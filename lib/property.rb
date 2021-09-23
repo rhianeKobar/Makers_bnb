@@ -8,7 +8,7 @@ class Property
     @name = name
     @description = description
     @price = price.to_i
-    @availability = to_boolean(availability)
+    @availability = availability
   end
 
   def self.all
@@ -33,9 +33,11 @@ class Property
     Property.new(id: result[0]['id'], name: result[0]['name'], description: result[0]['description'], price: result[0]['price'], availability: result[0]['availability'])
   end
 
-  private
-
-  def to_boolean(availability)
-    availability == "t"
+  def Property.to_boolean(availability)
+    if availability == 1.0
+      true
+    else
+      false
+    end
   end
 end
