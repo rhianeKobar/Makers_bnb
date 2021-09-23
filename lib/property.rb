@@ -26,7 +26,7 @@ class Property
 
 
   def self.to_boolean(availability)
-    availability == 1.0 ? true : false
+    availability == 1.0
   end
   
 end
