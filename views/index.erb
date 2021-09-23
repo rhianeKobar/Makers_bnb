@@ -4,11 +4,28 @@
     <link rel="stylesheet" type="text/css" href="<%= url("/css/styles.css")%>"/>
   </head>
   <body>
-    <div class="page">
-      <% @properties.each do |property| %>
-      <div class="property-container"><%= property%></div>
-      <% end%>
-    </div>
-    <h1 class="title">Find Properties</h1>
+    <!-- <div class="page"> -->
+        <div class="properties_page">
+          <div class="header container">
+          <div class="header text">
+            <h1 class="title">Find Properties</h1>
+          </div>
+          <div class="header button">
+            <form action="/add" class="add-form">
+              <input type="submit" value="Add">
+            </form>
+          </div>
+        </div>
+        <% @properties.each do |property| %>
+          <div class="property-container" id="<%= property.id %>">
+            <%= property.name %>
+            <%= property.description %>
+            <%= property.availability ? "Available" : "Unavailable" %>
+            <%= property.price %>
+          </div>
+        <% end %>
+        <div> 
+      </div>
+    <!-- </div> -->
   </body>
 </html>

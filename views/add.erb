@@ -1,17 +1,35 @@
 <html>
   <head>
-    <title>New Branch Title</title>
+    <title>Add Property</title>
     <link rel="stylesheet" type="text/css" href="<%= url("/css/styles.css")%>"/>
   </head>
   <body>
     <div class="page">
-      <form method="post" action="/">
-        <input type="text" name="name" />
-        <input type="text" name="description" />
-        <input type="number" name="price" />
-        <input type="range" name="availability" />
-        <input type="submit" name="add" value="add" />
-      </form>
+			<div class="middle">
+				<h1 class="add_prop_title">Add a new property</h1>
+				<form method="post" action="/add">
+					<div class="form_main">
+						<div class="form_input">
+							<input type="text" name="name" placeholder="Add property name" id="prop_name"/>
+						</div>
+						<div class="form_input">
+							<input type="text" name="price" placeholder="Add price per night" id="prop_price"/>
+						</div>
+						<div class="form_input">
+							<label hidden for="description">Property description</label>
+							<input type="text" name="description" placeholder="Add property description" id="prop_desc" style="width: 500px; height: 250px;" />
+						</div>
+					</div>
+					<div class="form_options">
+						<div class="form_avail">
+							<label for="available">Is this property available now?</label>
+							<input type="range" name="available" min=0 max=1 id="prop_availability" class="slider">
+						</div>
+						<input type="submit" name="add" value="add" id="prop_btn_add"/>
+					</div>
+				</form>
+			</div>
+			
     </div>
   </body>
 </html>
