@@ -13,7 +13,7 @@ class User
 
   private_class_method :encrypt
 
-  def initialize(id:, email: )
+  def initialize(id:, email:)
     @id = id
     @email = email
     # @requests_received = get_my_requests
