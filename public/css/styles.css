@@ -237,3 +237,20 @@ input[type="submit"] {
 .add_prop_title {
   padding-top: 100px;
 }
+
+.login_page {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.login_container {
+  grid-column: 5/9;
+}
+
+.login_box {
+  width: 405px;
+  height: 569px;
+  background: #DAD6DC;
+  box-shadow: 10px 10px 5px rgba(168, 159, 173, 0.57);
+  border-radius: 8px;
+}

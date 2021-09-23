@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>New Branch Title</title>
+    <link rel="stylesheet" type="text/css" href="<%= url("/css/styles.css")%>"/>
+  </head>
+  <body>
+    <div class="login_page">
+      <div class="login_container">
+        <h1>Login</h1>
+        <div class="login_box">
+          <form method="POST" action="/login_success">
+						<label for="email">Email:</label>
+						<input type="text" name="email">
+						<label for="password">Password:</label>
+						<input type="password" name="password">
+						<div>
+							<input type="submit" name="register" value="register">
+							<input type="submit" name="login" value="login">
+						</div>
+					</form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
