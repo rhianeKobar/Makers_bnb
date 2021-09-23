@@ -1,1 +1,0 @@
-CREATE TABLE properties(id SERIAL PRIMARY KEY, name VARCHAR(60), description TEXT, price INTEGER, availability BOOLEAN);
