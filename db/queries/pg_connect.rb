@@ -1,10 +1,11 @@
 require_relative 'pg_db.rb'
-
-p "move your dotenv load here if all else works (pg_connect.rb)"
+require 'dotenv'
 
 module DB 
 
-  def connect
+  def self.connect
+
+    Dotenv.load
 
     if ENV['ENVIRONMENT'] == 'test'
       PGDatabase.make_connection('bnb_test')
