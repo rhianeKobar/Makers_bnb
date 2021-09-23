@@ -4,11 +4,9 @@ require_relative './lib/property.rb'
 require_relative './db/queries/pg_connect.rb'
 
 class BNB < Sinatra::Base
-
-  include DB
   
   get '/' do
-    connect
+    DB.connect
     @properties = Property.all
     erb :index
   end
