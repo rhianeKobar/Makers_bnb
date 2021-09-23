@@ -5,6 +5,10 @@
   </head>
   <body>
     <!-- <div class="page"> -->
+      <form action="/login" >
+        <input type="submit" value ="Login / Register"/>
+      </form>
+        
         <div class="properties_page">
           <div class="header container">
           <div class="header text">
@@ -18,10 +22,12 @@
         </div>
         <% @properties.each do |property| %>
           <div class="property-container" id="<%= property.id %>">
-            <%= property.name %>
-            <%= property.description %>
-            <%= property.availability ? "Available" : "Unavailable" %>
-            <%= property.price %>
+            <div class=""> <%= property.name %></div>
+            <div class="">£<%= property.price %> </div>
+            <div class=""><%= property.description %></div>
+            <form action='request-book/<%=property.id%>'>
+              <input type="submit" value="book">
+            </form>
           </div>
         <% end %>
         <div> 

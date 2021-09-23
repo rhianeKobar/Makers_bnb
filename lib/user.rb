@@ -1,6 +1,9 @@
 require 'bcrypt'
+require 'dotenv'
 
 class User
+
+  Dotenv.load
 
   def self.add_new_user(email:, password:)
     result = PGDatabase.add_new_user(email: email, password: encrypt(password))
