@@ -17,6 +17,10 @@ class PGDatabase
       puts e.message 
     end 
   end
+  
+  def self.insert_user
+    @db_session.exec("query here...")
+  end
 
   def self.current_connection
     @db_session
@@ -34,7 +38,6 @@ class PGDatabase
   def self.select_property(id:)
     @db_session.query("SELECT * FROM properties WHERE id = #{id};")
   end
-
 
   # Insert
 
