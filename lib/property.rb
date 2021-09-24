@@ -23,7 +23,10 @@ class Property
     Property.new(id: result[0]['id'], name: result[0]['name'], description: result[0]['description'], price: result[0]['price'], availability: result[0]['availability'])
   end
 
-  def self.to_boolean(availability)
+  private 
+
+  # need to refactor
+  def to_boolean(availability)
     availability == 1.0
   end
   
