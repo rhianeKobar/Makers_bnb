@@ -25,9 +25,6 @@ class BNB < Sinatra::Base
   end
 
   post '/add' do
-    
-    p "params: #{params}"
-    p "Property.tobool: #{Property.to_boolean(params['available'])}"
     Property.add(name: params['name'], description: params['description'], price: params['price'], availability: params['available'], user_id: session[:user_id])
     redirect '/'
   end
@@ -56,6 +53,26 @@ class BNB < Sinatra::Base
     user = User.add_new_user(email: params['register_email'], password: params['register_password'])
     session[:user_id] = user.id
     #log in user automatically
+    redirect '/'
+  end
+
+  get '/my-requests' do
+    @user = User.find_user(id: session[:user_id])
+    p @user
+    redirect('/') if @user.nil? 
+    @requests = Property.get_requests(user_id: @user.id)
+    p @requests
+    erb :requests
+  end
+
+  post '/request-book/:id' do
+    @requester = User.find_user(id: session[:user_id])
+    p @requester
+    User.send_booking_request(requester_id: @requester.id , property_id: params["id"])
+    redirect '/'
+  end
+
+  get '/accept' do
     redirect '/'
   end
 

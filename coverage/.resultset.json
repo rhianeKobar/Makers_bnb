@@ -46,6 +46,50 @@
           null
         ]
       },
+<<<<<<< HEAD
+=======
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/check_bookings_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+>>>>>>> bd7222289bde171e0e1f67d2505474abe6094594
       "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/feature_spec.rb": {
         "lines": [
           null,
@@ -164,6 +208,84 @@
           null,
           null,
           null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -209,6 +331,10 @@
         ]
       }
     },
+<<<<<<< HEAD
     "timestamp": 1632498201
+=======
+    "timestamp": 1632496219
+>>>>>>> bd7222289bde171e0e1f67d2505474abe6094594
   }
 }
