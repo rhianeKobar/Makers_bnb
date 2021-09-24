@@ -8,6 +8,7 @@ require 'capybara/rspec'
 require 'pg'
 require 'simplecov'
 require 'simplecov-console' 
+require_relative './feature/feature_helper'
 require_relative 'setup_test_database'
 require_relative '../db/queries/pg_connect.rb'
 

@@ -25,7 +25,7 @@ class PGDatabase
   end
 
   def self.truncate_tables
-    @db_session.exec("TRUNCATE properties, users;")
+    @db_session.exec("TRUNCATE properties, users, property_request;")
   end
 
   # Select
