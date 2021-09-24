@@ -3,8 +3,9 @@ require 'property'
 describe Property do
   describe '.all' do
     it 'lists all the properties in table' do
-      property = Property.add(name: 'House1', description: 'this is a description', price: 5, availability: true)
-      Property.add(name: 'House2', description: 'this is another description', price: 10, availability: false)
+      user = User.add_new_user(email: 'user@dnb.co.uk', password: "password")
+      property = Property.add(name: 'House1', description: 'this is a description', price: 5, availability: true, user_id: user.id)
+      Property.add(name: 'House2', description: 'this is another description', price: 10, availability: false, user_id: user.id)
 
       result = Property.all
 
@@ -19,7 +20,8 @@ describe Property do
 
   describe '.add' do
     it 'can add a new property to the table' do
-      property = Property.add(name: 'House2', description: 'this is a description 2', price: 6, availability: false)
+      user = User.add_new_user(email: 'user@dnb.co.uk', password: "password")
+      property = Property.add(name: 'House2', description: 'this is a description 2', price: 6, availability: false, user_id: user.id)
       result =  PGDatabase.select_property(id: property.id)
       result = result.first
 

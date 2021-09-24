@@ -23,7 +23,7 @@ class BNB < Sinatra::Base
   end
 
   post '/add' do
-    Property.add(name: params['name'], description: params['description'], price: params['price'], availability: Property.to_boolean(params['available']))
+    Property.add(name: params['name'], description: params['description'], price: params['price'], availability: Property.to_boolean(params['available']), user_id: session[:user_id])
     redirect '/'
   end
 
