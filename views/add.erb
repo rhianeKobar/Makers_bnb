@@ -10,13 +10,15 @@
 				<form method="post" action="/add">
 					<div class="form_main">
 						<div class="form_input">
+							<label class="sr-only" for="name">Property name</label>
 							<input type="text" name="name" placeholder="Add property name" id="prop_name"/>
 						</div>
 						<div class="form_input">
+							<label class="sr-only" for="price">Property price</label>
 							<input type="text" name="price" placeholder="Add price per night" id="prop_price"/>
 						</div>
 						<div class="form_input">
-							<label hidden for="description">Property description</label>
+							<label class="sr-only" for="description">Property description</label>
 							<input type="text" name="description" placeholder="Add property description" id="prop_desc" style="width: 500px; height: 250px;" />
 						</div>
 					</div>
@@ -25,6 +27,7 @@
 							<label for="available">Is this property available now?</label>
 							<input type="range" name="available" min=0 max=1 id="prop_availability" class="slider">
 						</div>
+						<label class="sr-only" for="add">add</label>
 						<input type="submit" name="add" value="add" id="prop_btn_add"/>
 					</div>
 				</form>
