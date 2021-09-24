@@ -6,9 +6,9 @@
   <body>
     <div class="login_page">
       <div class="login_container">
-        <h1>Login</h1>
         <div class="login_box">
-          <form method="POST" action="/register">
+          <form method="POST" action="/register" class="register_form form_formatting">
+            <h2>Register</h2>
             <label class="sr-only" for="register_email">Email:</label>
             <input
               type="text"
@@ -22,10 +22,11 @@
               placeholder="Enter your password"
             />
             <div>
-              <input type="submit" name="register" value="register" />
+              <input type="submit" name="register" value="REGISTER"  id="btn_register"/>
             </div>
           </form>
-          <form method="POST" action="/login">
+          <form method="POST" action="/login" class="login_form form_formatting">
+            <h2>Login</h2>
             <label class="sr-only" for="login_email">Email:</label>
             <input
               type="text"
@@ -39,7 +40,7 @@
               placeholder="Enter your password"
             />
             <div>
-              <input type="submit" name="login" value="login" />
+              <input type="submit" name="login" value="LOGIN" id="btn_login"/>
             </div>
           </form>
         </div>
