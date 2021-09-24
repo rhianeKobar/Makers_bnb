@@ -1,12 +1,12 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/rhianekobar/Projects/Makers_bnb/spec/db_queries_spec.rb": {
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/db_queries_spec.rb": {
         "lines": [
 
         ]
       },
-      "/home/rhianekobar/Projects/Makers_bnb/spec/feature/add_properties_spec.rb": {
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/add_properties_spec.rb": {
         "lines": [
           1,
           1,
@@ -25,7 +25,7 @@
           null
         ]
       },
-      "/home/rhianekobar/Projects/Makers_bnb/spec/feature/all_properties_spec.rb": {
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/all_properties_spec.rb": {
         "lines": [
           1,
           1,
@@ -43,7 +43,7 @@
           null
         ]
       },
-      "/home/rhianekobar/Projects/Makers_bnb/spec/feature/feature_spec.rb": {
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/feature_spec.rb": {
         "lines": [
           null,
           null,
@@ -59,7 +59,7 @@
           null
         ]
       },
-      "/home/rhianekobar/Projects/Makers_bnb/spec/property_spec.rb": {
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/property_spec.rb": {
         "lines": [
           1,
           null,
@@ -97,11 +97,7 @@
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/rhianekobar/Projects/Makers_bnb/spec/user_spec.rb": {
-=======
       "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/user_spec.rb": {
->>>>>>> a8ec282135bb2dabac06f2096901c21ff08e88e7
         "lines": [
           1,
           null,
@@ -110,71 +106,16 @@
           1,
           1,
           1,
-<<<<<<< HEAD
-          0,
-          null,
-          0,
-          0,
-=======
           1,
           null,
           1,
           1,
->>>>>>> a8ec282135bb2dabac06f2096901c21ff08e88e7
-          null,
           null,
           null,
           null,
           1,
           0,
           0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-<<<<<<< HEAD
-      "/home/rhianekobar/Projects/Makers_bnb/lib/user.rb": {
-=======
-      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/lib/user.rb": {
->>>>>>> a8ec282135bb2dabac06f2096901c21ff08e88e7
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-<<<<<<< HEAD
-          0,
-=======
-          1,
->>>>>>> a8ec282135bb2dabac06f2096901c21ff08e88e7
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-<<<<<<< HEAD
-          0,
-          0,
-=======
-          1,
-          1,
->>>>>>> a8ec282135bb2dabac06f2096901c21ff08e88e7
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
           null,
           null,
           null,
@@ -184,10 +125,6 @@
         ]
       }
     },
-<<<<<<< HEAD
-    "timestamp": 1632413756
-=======
-    "timestamp": 1632411938
->>>>>>> a8ec282135bb2dabac06f2096901c21ff08e88e7
+    "timestamp": 1632416802
   }
 }

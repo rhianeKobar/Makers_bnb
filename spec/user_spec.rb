@@ -12,7 +12,6 @@ describe User do
       # need a test to check for password consistency
     end
 
-
     xit 'hashes the password using BCrypt' do
       expect(BCrypt::Password).to receive(:create).with('YOU2WILL_NEV3RGETD1Spassword123')
       user = User.add(username: 'encrypted', email: 'encrypted@example.com', password: 'password123')

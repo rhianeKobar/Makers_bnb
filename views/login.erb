@@ -8,13 +8,21 @@
       <div class="login_container">
         <h1>Login</h1>
         <div class="login_box">
-          <form method="POST" action="/login_success">
-						<label for="email">Email:</label>
-						<input type="text" name="email">
-						<label for="password">Password:</label>
-						<input type="password" name="password">
+          <form method="POST" action="/register">
+						<label hidden for="email">Email:</label>
+						<input type="text" name="email" placeholder="Enter your email">
+						<label hidden for="password">Password:</label>
+						<input type="password" name="password" placeholder="Enter your password">
 						<div>
 							<input type="submit" name="register" value="register">
+						</div>
+					</form>
+          <form method="POST" action="/login">
+						<label hidden for="email">Email:</label>
+						<input type="text" name="email" placeholder="Enter your email">
+						<label hidden for="password">Password:</label>
+						<input type="password" name="password" placeholder="Enter your password">
+						<div>
 							<input type="submit" name="login" value="login">
 						</div>
 					</form>
