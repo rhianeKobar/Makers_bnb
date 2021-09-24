@@ -25,7 +25,7 @@ class PGDatabase
   end
 
   def self.truncate_tables
-    @db_session.exec("TRUNCATE properties;")
+    @db_session.exec("TRUNCATE properties, users;")
   end
 
   # Select
@@ -48,7 +48,7 @@ class PGDatabase
   # Insert
 
   def self.insert_property(name:, description:, price:, availability:, user_id: )
-    @db_session.exec_params("INSERT INTO properties (name, description, price, availability, ID_USER) VALUES($1, $2, $3, $4, $5) RETURNING id, name, description, price, availability;", [name,description,price,availability, user_id])
+    @db_session.exec_params("INSERT INTO properties (name, description, price, availability, ID_USERS) VALUES($1, $2, $3, $4, $5) RETURNING id, name, description, price, availability;", [name,description,price,availability, user_id])
   end
 
   def self.add_new_user( email: , password: )
