@@ -29,6 +29,7 @@ class PGDatabase
   end
 
   # Select
+  
   def self.select_properties
     @db_session.exec("SELECT * FROM properties;")
   end
