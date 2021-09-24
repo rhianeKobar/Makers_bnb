@@ -41,6 +41,10 @@ class PGDatabase
     @db_session.exec_params("SELECT * FROM users WHERE id = $1;", [id]).first
   end
 
+  def self.select_user_email(email: )
+   @db_session.exec_params("SELECT * FROM users WHERE email = $1;", [email]).first
+  end
+
   # Insert
 
   def self.insert_property(name:, description:, price:, availability:)

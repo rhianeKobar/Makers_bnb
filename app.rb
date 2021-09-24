@@ -6,9 +6,12 @@ require_relative './lib/user'
 
 class BNB < Sinatra::Base
   
+  enable :sessions
+
   DB.connect
 
   get '/' do
+    @user = User.find_user(id: session[:user_id])
     @properties = Property.all
     erb :index
     #index needs a log in/ sign up button and request button also redirects to login
@@ -20,9 +23,13 @@ class BNB < Sinatra::Base
   end
 
   post '/add' do
-    p params
     Property.add(name: params['name'], description: params['description'], price: params['price'], availability: Property.to_boolean(params['available']))
     redirect '/'
+  end
+
+  get '/logout' do
+    session.clear
+    redirect('/')
   end
 
   get '/login' do
@@ -30,12 +37,19 @@ class BNB < Sinatra::Base
   end
 
   post '/login' do
-    #check user against db and login
-    redirect '/'
+    user = User.authenticate(email: params['login_email'], password: params['login_password'])
+    if user 
+      session[:user_id] = user.id 
+      redirect '/'
+    else 
+      session[:error] = 'Incorrect email or password - Please try again'
+      redirect('/login')
+    end
   end
 
   post '/register' do
-    User.add_new_user(email: params['email'], password: params['password'])
+    user = User.add_new_user(email: params['register_email'], password: params['register_password'])
+    session[:user_id] = user.id
     #log in user automatically
     redirect '/'
   end

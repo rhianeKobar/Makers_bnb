@@ -5,9 +5,18 @@
   </head>
   <body>
     <!-- <div class="page"> -->
+      <% if @user.nil? %>
       <form action="/login" >
         <input type="submit" value ="Login / Register"/>
       </form>
+      <% end %>
+
+      <% if @user %>
+      <form action="/logout" >
+        <input type="submit" value ="Logout"/>
+      </form>
+      <% end %>
+
         
         <div class="properties_page">
           <div class="header container">
@@ -15,9 +24,11 @@
             <h1 class="title">Find Properties</h1>
           </div>
           <div class="header button">
+            <% if @user %>
             <form action="/add" class="add-form">
               <input type="submit" value="Add">
             </form>
+            <% end %>
           </div>
         </div>
         <% @properties.each do |property| %>
@@ -25,9 +36,11 @@
             <div class=""> <%= property.name %></div>
             <div class="">£<%= property.price %> </div>
             <div class=""><%= property.description %></div>
+            <% if @user %>
             <form action='request-book/<%=property.id%>'>
               <input type="submit" value="book">
             </form>
+            <% end%>
           </div>
         <% end %>
         <div> 
