@@ -266,3 +266,11 @@ input[type="submit"] {
   box-shadow: 10px 10px 5px rgba(168, 159, 173, 0.57);
   border-radius: 8px;
 }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+}

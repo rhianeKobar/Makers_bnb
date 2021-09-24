@@ -43,7 +43,7 @@
             <div class="">£<%= property.price %> </div>
             <div class=""><%= property.description %></div>
             <% if @user %>
-            <form action='/request-book/<%=property.id%>' method="POST">
+            <form action='request-book/<%=property.id%>'>
               <input type="submit" value="book">
             </form>
             <% end %>
