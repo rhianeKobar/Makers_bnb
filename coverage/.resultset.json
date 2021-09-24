@@ -1,6 +1,173 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/db_queries_spec.rb": {
+        "lines": [
+
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/add_properties_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/all_properties_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/check_bookings_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/feature_spec.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/login_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/logout_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/register_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/feature/unavailable_property_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/property_spec.rb": {
         "lines": [
           1,
@@ -38,10 +205,88 @@
           null,
           null,
           null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/Makers_bnb/spec/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1632480404
+    "timestamp": 1632496219
   }
 }

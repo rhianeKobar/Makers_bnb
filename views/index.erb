@@ -13,10 +13,16 @@
       <% end %>
 
       <% if @user %>
-      <form action="/logout" >
-				<label class="sr-only" for="logout"> Logout</label>
-        <input type="submit" value ="Logout" name="logout"/>
-      </form>
+      <div class="navbar">
+        <form action="/logout" >
+          <label class="sr-only" for="logout"> Logout</label>
+          <input type="submit" name="logout" value ="Logout"/>
+        </form>
+        <form action="/my-requests" >
+          <label class="sr-only" for="submit"> Logout</label>
+          <input type="submit" value ="My Requests"/>
+        </form>
+      </div>
       <% end %>
 
         
@@ -36,13 +42,13 @@
         </div>
         <% @properties.each do |property| %>
           <div class="property-container" id="<%= property.id %>">
-            <div class=""> <%= property.name %></div>
-            <div class="">£<%= property.price %> </div>
-            <div class=""><%= property.description %></div>
+            <div class="text"> <%= property.name %></div>
+            <div class="text">£<%= property.price %> </div>
+            <div class="text"><%= property.description %></div>
             <% if @user %>
-            <form action='request-book/<%=property.id%>'>
-							<label class="sr-only" for="book">Book</label>
-              <input type="submit" value="book" name="book">
+            <form action='/request-book/<%=property.id%>' method="POST">
+              <label class="sr-only" for="book">Book</label>
+              <input type="submit" name="book" value="book">
             </form>
             <% end %>
           </div>

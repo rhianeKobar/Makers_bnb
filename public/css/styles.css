@@ -10,7 +10,8 @@ body {
     rgba(126, 200, 240, 0.708) 0%,
     rgba(200, 167, 240, 0.9) 70%
   );
-  background-size: 100%, 100%;
+  background-size: 100%, 200%;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
@@ -85,7 +86,7 @@ input[type="submit"] {
   --colour_b: #303943;
   --colour_pop: rgb(200, 133, 226);
   --text: rgb(59, 58, 58);
-  --mono: Verdana , sans-serif;
+  --mono: Verdana, sans-serif;
 }
 
 .page {
@@ -136,14 +137,24 @@ input[type="submit"] {
 .property-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   border-radius: 20px;
   background-color: white;
   box-shadow: 5px 5px 3px rgba(79, 78, 78, 0.571);
   width: 767px;
   height: 143px;
+  padding: 20px;
 }
+
+.text {
+  color: var(--text);
+}
+
+.description-text {
+  color: var(--text);
+}
+
 .middle {
   grid-column: 4 / 10;
 }
@@ -276,6 +287,13 @@ input[type="submit"] {
   align-items: center;
 }
 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+}
 .form_formatting {
   padding: 40px;
   display: flex;
@@ -293,7 +311,7 @@ input[type="submit"] {
 #btn_register {
   width: 193px;
   height: 47px;
-  background: #0000FF;
+  background: #0000ff;
   border-radius: 11px;
   color: white;
 }
@@ -301,7 +319,7 @@ input[type="submit"] {
 #btn_login {
   width: 193px;
   height: 47px;
-  background: #0000FF;
+  background: #0000ff;
   border-radius: 11px;
   color: white;
 }

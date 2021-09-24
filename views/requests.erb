@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>New Branch Title</title>
+    <link rel="stylesheet" type="text/css" href="<%= url("/css/styles.css")%>"/>
+  </head>
+  <body>
+    <!-- <div class="page"> -->
+      <% if @user %>
+      <div class="navbar">
+        <form action="/logout" >
+          <input type="submit" value ="Logout"/>
+        </form>
+        <form action="/" >
+          <input type="submit" value ="Home"/>
+        </form>
+      </div>
+
+      <% end %>
+
+        
+        <div class="properties_page">
+          <div class="header container">
+          <div class="header text">
+            <h1 class="title">My Requests</h1>
+          </div>
+        </div>
+        <% @requests.each do |request| %>
+          <div class="property-container" >
+            <div class=""> <%= request.property_name %></div>
+            <div class=""><%= request.requester %> </div>
+            <% if @user %>
+            <form action='/accept'>
+              <input type="submit" value="Accept">
+            </form>
+            <% end %>
+          </div>
+        <% end %>
+
+        
+        <div> 
+      </div>
+    <!-- </div> -->
+  </body>
+</html>
