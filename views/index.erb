@@ -6,14 +6,16 @@
   <body>
     <!-- <div class="page"> -->
       <% if @user.nil? %>
-      <form action="/login" >
-        <input type="submit" value ="Login / Register"/>
+      <form action="/login">
+				<label class="sr-only" for="login/register"> Login or Register</label>
+        <input type="submit" value ="Login / Register" name="login/register"/>
       </form>
       <% end %>
 
       <% if @user %>
       <form action="/logout" >
-        <input type="submit" value ="Logout"/>
+				<label class="sr-only" for="logout"> Logout</label>
+        <input type="submit" value ="Logout" name="logout"/>
       </form>
       <% end %>
 
@@ -26,7 +28,8 @@
           <div class="header button">
             <% if @user %>
             <form action="/add" class="add-form">
-              <input type="submit" value="Add">
+							<label class="sr-only" for="add">Add</label>
+              <input type="submit" value="Add" name="add">
             </form>
             <% end %>
           </div>
@@ -38,7 +41,8 @@
             <div class=""><%= property.description %></div>
             <% if @user %>
             <form action='request-book/<%=property.id%>'>
-              <input type="submit" value="book">
+							<label class="sr-only" for="book">Book</label>
+              <input type="submit" value="book" name="book">
             </form>
             <% end %>
           </div>
