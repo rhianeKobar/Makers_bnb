@@ -2,7 +2,7 @@
 
 # Project Description
 
-This project was inspired by AirBnb, it will allow property owners to list multiple properties to rent, and renters to be able to book that property if it is available on their selected dates.
+This project was inspired by AirBnb, it will allow property owners to list multiple properties to rent, and renters to be able to requst to book that property.
 
 # Our Team
 
@@ -13,6 +13,23 @@ This project was inspired by AirBnb, it will allow property owners to list multi
 [![Shakira](https://img.icons8.com/nolan/25/github.png)](https://github.com/rhianeKobar) Shakira
 
 [![Tomisin](https://img.icons8.com/nolan/25/github.png)](https://github.com/TomisinJ) Tomisin
+
+# How To Run
+
+- You will need
+  - A version of ruby
+  - A PostgresDB instance
+- Clone the repo `git clone https://github.com/rhianeKobar/Makers_bnb.git`
+- run `bundle install` to install dependencies
+- run `rackup` to launch the project on `http://localhost:9292`
+- Follow the instructions in `db/migration` for SQL queries
+- If you have a password connection to your postgres instance, you will need to set up a .env file with
+  - DB_DEV_NAME
+  - DB_TEST_NAME
+  - DBUSER
+  - DBPASSWORD
+- This application uses Becrypt for authentication, automatic salts are applied but peppers are also stored in the `.env` with the name:
+  - PEPPER
 
 # Our Approach
 
@@ -71,25 +88,28 @@ I want to sign up to makersbnb
 
 
 ```
------
+
+---
+
 ### Modelling
+
 <br><br>
 
-Database CRC cards![Database CRC cards](images/db_crc_cards.png) 
+Database CRC cards![Database CRC cards](images/db_crc_cards.png)
 
 <br>
 
-Domain Model![Domain Model](images/Domain_model.png) 
+Domain Model![Domain Model](images/Domain_model.png)
 
 <br>
 
-HTTP view and controller![HTTP view and controller](images/view_and_controller.png) 
+HTTP view and controller![HTTP view and controller](images/view_and_controller.png)
 <br>
 
-------
+---
 
 ### Database set-up
 
 1. Connect to `psql`
 2. We need to create two databases, for the database follow the commands in <br> Database: `db/migrations/database_setup.sql` file<br>
-Test_database: `db/migrations/test_db/test_database_setup.sql`
+   Test_database: `db/migrations/test_db/test_database_setup.sql`
