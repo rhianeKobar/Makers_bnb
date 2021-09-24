@@ -1,6 +1,7 @@
 feature 'Adding a Property' do
   scenario 'A user can properties to the current listing' do
-    visit ('/add')
+    visit ('/')
+    
     fill_in('name', with: 'example name')
     fill_in('description', with: 'example description')
     fill_in('price', with: 5)

@@ -4,8 +4,8 @@ describe Property do
   describe '.all' do
     it 'lists all the properties in table' do
       user = User.add_new_user(email: 'user@dnb.co.uk', password: "password")
-      property = Property.add(name: 'House1', description: 'this is a description', price: 5, availability: true, user_id: user.id)
-      Property.add(name: 'House2', description: 'this is another description', price: 10, availability: false, user_id: user.id)
+      property = Property.add(name: 'House1', description: 'this is a description', price: 5, availability: "1", user_id: user.id)
+      Property.add(name: 'House2', description: 'this is another description', price: 10, availability: "0", user_id: user.id)
 
       result = Property.all
 
@@ -13,7 +13,7 @@ describe Property do
       expect(result.first.name).to eq 'House1' 
       expect(result.first.description).to eq 'this is a description'
       expect(result.first.price).to eq 5
-      expect(result.first.availability).to eq 't'
+      expect(result.first.availability).to eq true
       expect(result.first.id).to eq property.id
     end
   end
@@ -29,7 +29,7 @@ describe Property do
       expect(property.name).to eq result['name']
       expect(property.description).to eq result['description']
       expect(property.price).to eq result['price'].to_i
-      expect(property.availability).to eq 'f'
+      expect(property.availability).to eq false
     end
   end
 end
