@@ -19,11 +19,16 @@ class BNB < Sinatra::Base
 
   get '/add' do
     #need to run check to see if user is logged in
+    @user = User.find_user(id: session[:user_id])
+    redirect('/') if @user.nil? 
     erb :add
   end
 
   post '/add' do
-    Property.add(name: params['name'], description: params['description'], price: params['price'], availability: Property.to_boolean(params['available']), user_id: session[:user_id])
+    
+    p "params: #{params}"
+    p "Property.tobool: #{Property.to_boolean(params['available'])}"
+    Property.add(name: params['name'], description: params['description'], price: params['price'], availability: params['available'], user_id: session[:user_id])
     redirect '/'
   end
 

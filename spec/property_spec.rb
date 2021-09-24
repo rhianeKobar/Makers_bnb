@@ -21,7 +21,7 @@ describe Property do
   describe '.add' do
     it 'can add a new property to the table' do
       user = User.add_new_user(email: 'user@dnb.co.uk', password: "password")
-      property = Property.add(name: 'House2', description: 'this is a description 2', price: 6, availability: false, user_id: user.id)
+      property = Property.add(name: 'House2', description: 'this is a description 2', price: 6, availability: "0", user_id: user.id)
       result =  PGDatabase.select_property(id: property.id)
       result = result.first
 
