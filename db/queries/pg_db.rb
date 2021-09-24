@@ -56,4 +56,19 @@ class PGDatabase
     @db_session.exec_params("INSERT INTO users (email, password) VALUES ($1,$2) RETURNING *;", [email , password]).first
   end
 
+  def self.insert_request(requester_id:, property_id:)
+    owner_id = @db_session.exec_params("SELECT id_users FROM properties WHERE id = $1", [property_id]).first
+    @db_session.exec_params("INSERT INTO property_request (id_properties, id_user_requested, id_user_owner) VALUES ($1,$2,$3)",[property_id, requester_id, owner_id["id_users"]])
+  end
+
+  def self.get_requests(user_id:)
+   result =  @db_session.exec_params("SELECT p.name , u.email
+      FROM property_request pr
+      JOIN users u
+        ON u.id = pr.id_user_requested
+      JOIN properties p
+        ON p.id = pr.id_properties
+      WHERE pr.id_user_owner = $1
+      ;", [user_id])
+  end
 end

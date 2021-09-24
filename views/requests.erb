@@ -5,19 +5,13 @@
   </head>
   <body>
     <!-- <div class="page"> -->
-      <% if @user.nil? %>
-      <form action="/login" >
-        <input type="submit" value ="Login / Register"/>
-      </form>
-      <% end %>
-
       <% if @user %>
       <div class="navbar">
         <form action="/logout" >
           <input type="submit" value ="Logout"/>
         </form>
-        <form action="/my-requests" >
-          <input type="submit" value ="My Requests"/>
+        <form action="/" >
+          <input type="submit" value ="Home"/>
         </form>
       </div>
 
@@ -27,28 +21,22 @@
         <div class="properties_page">
           <div class="header container">
           <div class="header text">
-            <h1 class="title">Find Properties</h1>
-          </div>
-          <div class="header button">
-            <% if @user %>
-            <form action="/add" class="add-form">
-              <input type="submit" value="Add">
-            </form>
-            <% end %>
+            <h1 class="title">My Requests</h1>
           </div>
         </div>
-        <% @properties.each do |property| %>
-          <div class="property-container" id="<%= property.id %>">
-            <div class=""> <%= property.name %></div>
-            <div class="">£<%= property.price %> </div>
-            <div class=""><%= property.description %></div>
+        <% @requests.each do |request| %>
+          <div class="property-container" >
+            <div class=""> <%= request.property_name %></div>
+            <div class=""><%= request.requester %> </div>
             <% if @user %>
-            <form action='request-book/<%=property.id%>'>
-              <input type="submit" value="book">
+            <form action='/accept'>
+              <input type="submit" value="Accept">
             </form>
             <% end %>
           </div>
         <% end %>
+
+        
         <div> 
       </div>
     <!-- </div> -->

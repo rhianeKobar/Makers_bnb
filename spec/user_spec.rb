@@ -19,9 +19,9 @@ describe User do
       expect(result.id).to eq result.id 
     end
 
-    xit 'hashes the password using BCrypt' do
+    it 'hashes the password using BCrypt' do
       expect(BCrypt::Password).to receive(:create).with('YOU2WILL_NEV3RGETD1Spassword123')
-      user = User.add(username: 'encrypted', email: 'encrypted@example.com', password: 'password123')
+      user = User.add_new_user(email: 'encrypted@example.com', password: 'password123')
     end
 
     it 'when authenticated' do
@@ -32,6 +32,15 @@ describe User do
     end
 
   end
+
+  # describe '.send_booking_request' do
+  #   it 'stores the booking request for the requester' do
+  #     requester = User.add_new_user(email: 'requester@dnb.co.uk', password: 'password123')
+  #     requested_property = Property.add(name: 'House1', description: 'desc', price: 5, availability: '1', user_id: requester.id)
+  #     User.send_booking_request(requester_id: requester.id, property_id: requested_property.id)
+  #     expect(requester.requests_sent).to include requested_property.id
+  #   end
+  # end
   
 end
 

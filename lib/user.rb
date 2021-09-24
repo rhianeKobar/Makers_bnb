@@ -29,20 +29,19 @@ class User
     end
   end
 
+  def self.send_booking_request(requester_id:, property_id:)
+    PGDatabase.insert_request(requester_id: requester_id, property_id: property_id)
+  end
+
   private_class_method :encrypt
 
   def initialize(id:, email:)
     @id = id
     @email = email
     # @requests_received = get_my_requests
-    # @requests_sent = []
   end
 
   attr_reader :id, :email, :password
 
-  # def get_my_requests
-  #   PGDatabase.get_requests(id: @id)
-  # end
 
-  
 end

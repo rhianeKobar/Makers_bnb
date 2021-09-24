@@ -21,7 +21,7 @@ feature 'able to see own bookings' do
     click_button 'My Requests'
     expect(page).to have_content 'example name'
     expect(page).to have_content 'user@gmail.com'
-    expect(page).to have_selector(:link_or_button, 'Approve')
+    expect(page).to have_selector(:link_or_button, 'Accept')
   end
 end
 

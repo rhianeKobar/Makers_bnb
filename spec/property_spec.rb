@@ -32,5 +32,14 @@ describe Property do
       expect(property.availability).to eq false
     end
   end
+
+  describe 'get requests' do
+    
+    it '' do
+      
+    end
+
+  end
+
 end
 
