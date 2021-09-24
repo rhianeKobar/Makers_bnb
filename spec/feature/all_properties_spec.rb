@@ -12,3 +12,5 @@ feature 'View all properties' do
 
   end
 end
+
+
