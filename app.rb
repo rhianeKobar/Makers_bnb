@@ -58,13 +58,16 @@ class BNB < Sinatra::Base
 
   get '/my-requests' do
     @user = User.find_user(id: session[:user_id])
+    p @user
     redirect('/') if @user.nil? 
     @requests = Property.get_requests(user_id: @user.id)
+    p @requests
     erb :requests
   end
 
   post '/request-book/:id' do
     @requester = User.find_user(id: session[:user_id])
+    p @requester
     User.send_booking_request(requester_id: @requester.id , property_id: params["id"])
     redirect '/'
   end

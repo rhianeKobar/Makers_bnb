@@ -6,21 +6,23 @@
   <body>
     <!-- <div class="page"> -->
       <% if @user.nil? %>
-      <form action="/login" >
-        <input type="submit" value ="Login / Register"/>
+      <form action="/login">
+				<label class="sr-only" for="login/register"> Login or Register</label>
+        <input type="submit" value ="Login / Register" name="login/register"/>
       </form>
       <% end %>
 
       <% if @user %>
       <div class="navbar">
         <form action="/logout" >
-          <input type="submit" value ="Logout"/>
+          <label class="sr-only" for="logout"> Logout</label>
+          <input type="submit" name="logout" value ="Logout"/>
         </form>
         <form action="/my-requests" >
+          <label class="sr-only" for="submit"> Logout</label>
           <input type="submit" value ="My Requests"/>
         </form>
       </div>
-
       <% end %>
 
         
@@ -32,19 +34,21 @@
           <div class="header button">
             <% if @user %>
             <form action="/add" class="add-form">
-              <input type="submit" value="Add">
+							<label class="sr-only" for="add">Add</label>
+              <input type="submit" value="Add" name="add">
             </form>
             <% end %>
           </div>
         </div>
         <% @properties.each do |property| %>
           <div class="property-container" id="<%= property.id %>">
-            <div class=""> <%= property.name %></div>
-            <div class="">£<%= property.price %> </div>
-            <div class=""><%= property.description %></div>
+            <div class="text"> <%= property.name %></div>
+            <div class="text">£<%= property.price %> </div>
+            <div class="text"><%= property.description %></div>
             <% if @user %>
             <form action='/request-book/<%=property.id%>' method="POST">
-              <input type="submit" value="book">
+              <label class="sr-only" for="book">Book</label>
+              <input type="submit" name="book" value="book">
             </form>
             <% end %>
           </div>

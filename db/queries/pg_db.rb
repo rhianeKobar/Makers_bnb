@@ -62,7 +62,8 @@ class PGDatabase
   end
 
   def self.get_requests(user_id:)
-   result =  @db_session.exec_params("SELECT p.name , u.email
+    p "userid #{user_id}"
+  result = @db_session.exec_params("SELECT p.name , u.email
       FROM property_request pr
       JOIN users u
         ON u.id = pr.id_user_requested
@@ -70,5 +71,6 @@ class PGDatabase
         ON p.id = pr.id_properties
       WHERE pr.id_user_owner = $1
       ;", [user_id])
+      result.each { |row| p row }
   end
 end

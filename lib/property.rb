@@ -20,7 +20,9 @@ class Property
   end
 
   def self.get_requests(user_id:)
+    
     result =  PGDatabase.get_requests(user_id: user_id)
+    p "result #{result.first}"
     result.map { |row| 
       Request.new(property_name: row["name"], requester: row["email"])
     }

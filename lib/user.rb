@@ -30,6 +30,8 @@ class User
   end
 
   def self.send_booking_request(requester_id:, property_id:)
+    p requester_id
+    p property_id
     PGDatabase.insert_request(requester_id: requester_id, property_id: property_id)
   end
 
